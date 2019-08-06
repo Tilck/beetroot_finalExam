@@ -1,0 +1,39 @@
+@font-face {
+    font-family: PTSans-Regular;
+    src: url('../fonts/PTSans/PTSans-Regular.eot');
+    src: url('../fonts/PTSans/PTSans-Regular.ttf') format("truetype"), url('../fonts/PTSans/PTSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: PTSans-Bold;
+    src: url('../fonts/PTSans/PTSans-Bold.eot');
+    src: url('../fonts/PTSans/PTSans-Bold.ttf') format("truetype"), url('../fonts/PTSans/PTSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: PTSans-Italic;
+    src: url('../fonts/PTSans/PTSans-Italic.eot');
+    src: url('../fonts/PTSans/PTSans-Italic.ttf') format("truetype"), url('../fonts/PTSans/PTSans-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: ProximaNova-Semibold;
+    src: url('../fonts/ProximaNova/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova/ProximaNova-Bold.ttf') format("truetype"), url('../fonts/ProximaNova/ProximaNova-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: ProximaNova-Bold;
+    src: url('../fonts/ProximaNova/ProximaNova-Bold.eot');
+    src: url('../fonts/ProximaNova/ProximaNova-Bold.ttf') format("truetype"), url('../fonts/ProximaNova/ProximaNova-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal
+}
