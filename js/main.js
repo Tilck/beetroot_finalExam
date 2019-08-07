@@ -5,13 +5,15 @@ $(document).ready(function(){
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
         dots: true,
         arrows: true,
         prevArrow: '<img src="img/images/sliderLeftArrow.png" alt="prevArr" class="slider__arrow slider__arrow--prev">',
         nextArrow: '<img src="img/images/sliderRightArrow.png" alt="nextArr" class="slider__arrow slider__arrow--next">',
     });
 
-    $('.team__sliderElem').slick({
+    $('.team__slider').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -26,20 +28,21 @@ $(document).ready(function(){
 /////////////////////////////////
 
 Vue.component("team-card", {
-    template: `<div class="team__card card">
-        <div class="card__photo">
-            <img :src="user.photo" alt="userPhoto">
-        </div>
-        <h3 class="card__title"> {{user.name}} </h3>
-        <p class="card__position"> {{user.position}} </p>
-        <div class="card__footer" >
-            <a v-for="social in user.socials" 
-                :key="social.id" 
-                :href="social[0]">
-                <i :class="social[1]"></i>
-            </a>
-        </div>
-        </div>`,
+    template: `
+            <div class="team__card card">
+                <div class="card__photo">
+                    <img :src="user.photo" alt="userPhoto">
+                </div>
+                <h3 class="card__title"> {{user.name}} </h3>
+                <p class="card__position"> {{user.position}} </p>
+                <div class="card__footer" >
+                    <a v-for="social in user.socials" 
+                        :key="social.id" 
+                        :href="social[0]">
+                        <i :class="social[1]"></i>
+                    </a>
+                </div>
+            </div>`,
     props: ["user"],
 })
 
@@ -90,7 +93,6 @@ var vm = new Vue({
                 name: 'Morrison Carroll',
                 position: 'Sensei',
                 socials: {
-                    be: ['https://www.behance.net/', 'fab fa-behance-square'],
                     in: ['https://www.linkedin.com/', "fab fa-linkedin"],
                     g: ['https://accounts.google.com', "fab fa-google-plus-square"],
                     fb: ['https://fb.com/', "fab fa-facebook-square"],
@@ -103,11 +105,8 @@ var vm = new Vue({
                 name: 'Mora Miguel',
                 position: 'Designer',
                 socials: {
-                    be: ['https://www.behance.net/', 'fab fa-behance-square'],
-                    in: ['https://www.linkedin.com/in/bohdan-shumakov-096b07186/', "fab fa-linkedin"],
-                    g: ['https://accounts.google.com', "fab fa-google-plus-square"],
-                    fb: ['https://www.facebook.com/bohdan.shumakov.vn.ua', "fab fa-facebook-square"],
-                    tw: ['https://twitter.com/', 'fab fa-twitter-square']
+                    in: ['https://www.linkedin.com', "fab fa-linkedin"],
+                    g: ['https://accounts.google.com', "fab fa-google-plus-square"]
                 }
             },
 
@@ -155,5 +154,34 @@ function labelSlick(){
     console.log(this);
 }
 
+///////////////////////////////////placeholder////
+
+// $('.form__placeholder').click(function() {
+//   $(this).siblings('input').focus();
+// });
+$('.forPlaceholder').focus(function() {
+    $(this).siblings('.form__placeholder').hide();
+});
+$('.forPlaceholder').blur(function() {
+    if ($(this).val().length == 0)
+        $(this).siblings('.form__placeholder').show();
+});
+$('.forPlaceholder').blur();
 
 
+/////////////////scroll down/////
+$("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+        event.preventDefault();
+
+        var hash = this.hash;
+
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 1000, function(){
+
+            window.location.hash = hash;
+        });
+    }
+});

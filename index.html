@@ -131,16 +131,14 @@
                 <h3 class="team__title">meet our team</h3>
             </div>
             <div class="team__slider">
-                <div class="team__sliderElem">
-                    <team-card v-for="user in users" :user="user" :key="user.id">
+                <team-card v-for="user in users" :user="user" :key="user.id">
 
-                    </team-card>
-                </div>
+                </team-card>
             </div>
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
         <div id="map"></div>
         <div class="container">
             <div class="contact__header">
@@ -151,17 +149,26 @@
             </div>
             <form action="#" class="contact__form form" id="vueForm">
                 <div class="form__elem">
-                    <input type="text" class="form__input" id="input-name">
-                    <p class="form__placeholder"> Your name <sup>*</sup></p>
+                    <input type="text" class="form__input forPlaceholder" id="input-name">
+                    <div class="form__placeholder">
+                        <label for="input-name">Your name</label>
+                        <span class="star">*</span>
+                    </div>
                 </div>
 
                 <div class="form__elem">
-                    <input type="text" class="form__input" id="input-email">
-                    <p class="form__placeholder"> Your email <sup>*</sup></p>
+                    <input type="text" class="form__input forPlaceholder" id="input-email">
+                    <div class="form__placeholder">
+                        <label for="input-email">Your email</label>
+                        <span class="star">*</span>
+                    </div>
                 </div>
                 <div class="form__elem">
-                    <textarea class="form__textarea"></textarea>
-                    <p class="form__placeholder">Your message <sup>*</sup></p>
+                    <textarea class="form__textarea forPlaceholder"></textarea>
+                    <div class="form__placeholder" id="input-textarea">
+                        <label for="input-textarea">Your message</label>
+                        <span class="star">*</span>
+                    </div>
                 </div>
             </form>
             <button class="contact__btn btn">Send message</button>

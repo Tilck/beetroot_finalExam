@@ -226,107 +226,9 @@ html {
   }
 }
 
-.our-team {
-  height: 820px;
-  background-color: #ebebeb;
-  padding-top: 55px;
-
-  &__card {
-    margin-top: 300px;
-    width: 350px;
-    height: 355px;
-    position: relative;
-    background-color: #fff;
-    margin-left: 20px;
-    margin-right: 20px;
-
-    &-footer {
-      background-color: #9f9acf;
-      height: 70px;
-      width: 350px;
-      position: absolute;
-      bottom: 0;
-      text-align: center;
-      padding-top: 20px;
-      & i {
-        width: 50px;
-        border-radius: 50%;
-        font-size: 1.9rem;
-        color: #fff;
-      }
-    }
-
-    &-photo {
-      position: absolute;
-      top: -120px;
-      left: calc(50% - 115px);
-
-    }
-
-    & .card-photo {
-      border: 10px solid #ebebeb;
-      border-radius: 50%;
-      width: 230px;
-    }
-
-    &-title {
-      text-align: center;
-      font-family: $font-proxima;
-      font-size: 1.33rem;
-      padding: 160px 0 10px;
-      color: #9f9acf;
-      text-transform: uppercase;
-    }
-
-    &-position {
-      text-align: center;
-      font-family: $font-PTSans;
-      font-size: 1.33rem;
-      font-style: italic;
-      color: #665f60;
-    }
-  }
-
-  &__slider-wrapper {
-    position: relative;
-
-    & .slider-arrow_prev {
-      position: absolute;
-      top: 450px;
-      left: -90px;
-      cursor: pointer;
-    }
-
-    & .slider-arrow_next {
-      position: absolute;
-      top: 450px;
-      right: -90px;
-      cursor: pointer;
-    }
-  }
-
-  &__header {
-    text-align: center;
-
-  }
-
-  &__title {
-    font-size: 2rem;
-    font-family: $font-proxima;
-    color: #665f60;
-    text-transform: uppercase;
-    padding-top: 35px;
-  }
-
-  &__slider {
-    margin-top: -100px
-  }
-}
-
 .team {
   background-color: $bg-color;
-  height: 820px;
-  padding-top: 55px;
+  padding: 55px 0 130px;
   &__header {
     text-align: center;
     svg {margin: 0 auto}
@@ -344,8 +246,49 @@ html {
     position: relative;
     width: 350px;
     height: 355px;
-    margin: 300px 20px 0;
+    margin: 200px 20px 0;
     background-color: #fff;
+  }
+}
+
+.card {
+  &__photo {
+    position: absolute;
+    top: -120px;
+    left: calc(50% - 115px);
+    & img {
+      border: 10px solid #ebebeb;
+      border-radius: 50%;
+      width: 230px;
+    }
+  }
+  &__title {
+    text-align: center;
+    font: 24px "ProximaNova", sans-serif;
+    padding: 160px 0 10px;
+    color: $main-color;
+    text-transform: uppercase;
+  }
+  &__position {
+    text-align: center;
+    font: 24px "PT Sans", sans-serif;
+    font-style: italic;
+    color: $text-color;
+  }
+  &__footer {
+    display: flex;
+    position: absolute;
+    height: 70px;
+    width: 100%;
+    font-size: 30px;
+    background-color: $main-color;
+    bottom: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    a {
+      text-decoration: none;
+    }
   }
 }
 
@@ -461,15 +404,16 @@ html {
   }
   &__placeholder {
     position: absolute;
-    top: 8px;
+    line-height: 50px;
+    top: 0;
     left: 15px;
     color: #fff;
     font-family: "PT Sans", sans-serif;
     font-style: italic;
-    > sup {
-      color: $main-color;
-    }
   }
+}
+.star {
+  color: $main-color;
 }
 
 .footer {

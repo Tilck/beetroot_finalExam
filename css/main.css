@@ -178,8 +178,7 @@ html {
 
 .team {
   background-color: #ebebeb;
-  height: 820px;
-  padding-top: 55px; }
+  padding: 55px 0 130px; }
   .team__header {
     text-align: center; }
     .team__header svg {
@@ -195,8 +194,41 @@ html {
     position: relative;
     width: 350px;
     height: 355px;
-    margin: 300px 20px 0;
+    margin: 200px 20px 0;
     background-color: #fff; }
+
+.card__photo {
+  position: absolute;
+  top: -120px;
+  left: calc(50% - 115px); }
+  .card__photo img {
+    border: 10px solid #ebebeb;
+    border-radius: 50%;
+    width: 230px; }
+.card__title {
+  text-align: center;
+  font: 24px "ProximaNova", sans-serif;
+  padding: 160px 0 10px;
+  color: #9f9acf;
+  text-transform: uppercase; }
+.card__position {
+  text-align: center;
+  font: 24px "PT Sans", sans-serif;
+  font-style: italic;
+  color: #665f60; }
+.card__footer {
+  display: flex;
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  font-size: 30px;
+  background-color: #9f9acf;
+  bottom: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly; }
+  .card__footer a {
+    text-decoration: none; }
 
 #map {
   height: 900px; }
@@ -295,13 +327,15 @@ html {
     color: #fff; }
   .form__placeholder {
     position: absolute;
-    top: 8px;
+    line-height: 50px;
+    top: 0;
     left: 15px;
     color: #fff;
     font-family: "PT Sans", sans-serif;
     font-style: italic; }
-    .form__placeholder > sup {
-      color: #9f9acf; }
+
+.star {
+  color: #9f9acf; }
 
 .footer {
   background-color: #9f9acf;
