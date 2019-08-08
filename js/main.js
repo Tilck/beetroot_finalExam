@@ -20,7 +20,24 @@ $(document).ready(function(){
         dots: false,
         arrows: true,
         prevArrow: '<img src="img/images/teamLeftArrow.png" alt="prevArr" class="slider__arrow slider__arrow--prev">',
-        nextArrow: '<img src="img/images/teamRightArrow.png" alt="nextArr" class="slider__arrow slider__arrow--next">'
+        nextArrow: '<img src="img/images/teamRightArrow.png" alt="nextArr" class="slider__arrow slider__arrow--next">',
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
 });
